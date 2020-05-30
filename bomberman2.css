@@ -4,14 +4,16 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    margin: 0;
+    background-color: white;
+    position: relative;
     
 
 }
 .title{
     height: 40px;
-    width: 54vw;
-    margin-left: 23%;
+    /* width: 54vw; */
+    /* margin-left: 23%; */
     padding: 0;
     background-color: darkgray;
     display: flex;
@@ -20,9 +22,9 @@ body{
 }
 .main{
     background-color: aliceblue;
-    height: 40px;
+    height: 100px;
     width: 54vw;
-    margin-left: 23%;
+    margin-left: 23vw;
     display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
@@ -37,8 +39,8 @@ body{
 .board{
     display: grid;
     width: 54vw;
-    height: 54vh;
-    margin-left: 23%;
+    height: 54vw;
+    margin-left: 23vw;
     justify-content: center;
     grid-template-columns: repeat(9,auto);
     justify-content: center;
@@ -46,20 +48,21 @@ body{
     justify-items: center;
     align-content: center;
     
-    background-color: cyan;
+    background-color: white;
     
 
 }
 .cell{
     display: flex;
-    background-color: white;
+    background-color: #626567;
     
-    width: 6vh;
-    height: 6vh;
-    border:1px solid crimson;
+    width: 6vw;
+    height: 6vw;
+    border:2px solid white;
     justify-content: center;
     align-items: center;
     align-items: center;
+    cursor: pointer;
 
     
 }
@@ -68,8 +71,146 @@ body{
 }
 
 .greenselect{
-    background-color: darkgreen;
+    background-color: green;
 }
 .disabled{
     pointer-events: none;
+}
+
+
+
+#restartButton{
+    display: block;
+    margin-left: 45%;
+    margin-top: 20px;
+    width: 10vw;
+    height: 5vw;
+    cursor: pointer;
+}
+
+
+.child{
+    display: none;
+}
+
+.child.show{
+    display: inline-block;
+    position: absolute;
+    background-color: khaki;
+    opacity: 0.6;
+    
+}
+
+.cell.greenselect.firstedge,.secondedgeleft,.thirdedgeup,.fourthedgeupleft{
+    border-top:2px solid red ;
+    border-left:2px solid red ;
+}
+.firstedgeright,.secondedge,.thirdedgeupright,.fourthedgeup{
+    border-top:2px solid red ;
+    border-right:2px solid red ;
+}
+.firstedgedown,.secondedgedownleft,.thirdedge,.fourthedgeleft{
+    border-bottom:2px solid red ;
+    border-left:2px solid red ;
+}
+.firstedgedownright,.secondedgedown,.thirdedgeright,.fourthedge{
+    border-bottom:2px solid red ;
+    border-right:2px solid red ;
+}
+
+.leftedge{
+    border-left:2px solid red ;
+}
+.leftedgeup{
+    border-left:2px solid red ;
+    border-top:2px solid red ;
+}
+.leftedgedown{
+    border-left:2px solid red ;
+    border-bottom:2px solid red ;
+}
+.leftedgeupright{
+    border-top:2px solid red ;
+    border-right:2px solid red ;
+}
+.leftedgeright{
+    
+    border-right:2px solid red ;
+}
+.leftedgedownright{
+    border-bottom:2px solid red ;
+    border-right:2px solid red ;
+}
+.topedge{
+    border-top:2px solid red ;
+
+}
+.topedgeright{
+    border-top:2px solid red ;
+    border-right:2px solid red ;
+}
+.topedgeleft{
+    border-top:2px solid red ;
+    border-left:2px solid red ;
+}
+.topedgedown{
+    border-bottom:2px solid red ;
+}
+.topedgedownleft{
+    border-bottom:2px solid red ;
+    border-left:2px solid red ;
+}
+.topedgedownright{
+    border-bottom:2px solid red ;
+    border-right:2px solid red ;
+}
+.rightedge{
+    border-right:2px solid red ;
+}
+.rightedgeup{
+    border-right:2px solid red ;
+    border-top:2px solid red ;
+}
+.rightedgedown{
+    border-right:2px solid red ;
+    border-bottom:2px solid red ;
+}
+.rightedgeleft{
+    border-left:2px solid red ;
+}
+.rightedgeleftdown{
+    border-left:2px solid red ;
+    border-bottom:2px solid red ;
+}
+.rightedgeleftup{
+    border-left:2px solid red ;
+    border-top:2px solid red ;
+}
+.bottomedge,.middledown{
+    border-bottom:2px solid red ;
+}
+.bottomright,.middledownright{
+    border-right:2px solid red ;
+    border-bottom:2px solid red ;
+}
+.bottomleft,.middledownleft{
+    border-left:2px solid red ;
+    border-bottom:2px solid red ;
+}
+.bottomup,.middleup{
+    border-top:2px solid red ;
+}
+.bottomupleft,.middleupleft{
+    border-left:2px solid red ;
+    border-top:2px solid red ;
+}
+.bottomupright,.middleupright{
+    border-right:2px solid red ;
+    border-top:2px solid red ;
+}
+.middleleft{
+    border-left: 2px solid red;
+}
+.middleright{
+    border-right: 2px solid red;
 }
