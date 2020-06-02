@@ -6,49 +6,81 @@ body{
     width: 100vw;
     margin: 0;
     background-color: white;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    
     
 
 }
 .title{
-    height: 40px;
+    height: 100px;
+    
     /* width: 54vw; */
     /* margin-left: 23%; */
-    padding: 0;
-    background-color: darkgray;
+    
+    padding-top: 0px;
+    
     display: flex;
     justify-content: center;
+    font-size: 2rem;
+    font-family: 'Piedra', cursive;
     
 }
 .main{
-    background-color: aliceblue;
-    height: 100px;
-    width: 54vw;
-    margin-left: 23vw;
+    
+    
+    width: 100vw;
+    
     display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
+   
+   justify-content: center;
    align-items: flex-end;
+   
     
 }
-
+.cell:nth-child(odd){
+    background-color: #BDC3C7;
+}
+.cell:nth-child(even){
+    background-color: #CACFD2;
+}
 .player,.score,.titlename{
     margin: 0;
     padding: 0;
+    
+}
+.player{
+    width:240px ;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Permanent Marker', cursive;
+    
+}
+.score{
+    width: 240px;
+    display: flex;
+    font-size: 1.2rem;
+    
+    justify-content: flex-end;
+    font-family: 'Source Code Pro', monospace;
+
+    
 }
 .board{
     display: grid;
-    width: 54vw;
-    height: 54vw;
-    margin-left: 23vw;
-    justify-content: center;
+    width: 100vw;
+    height: 504px;
+    
+    /* background-color: black; */
     grid-template-columns: repeat(9,auto);
     justify-content: center;
     align-items: center;
     justify-items: center;
     align-content: center;
+   
     
-    background-color: white;
+    
     
 
 }
@@ -56,38 +88,97 @@ body{
     display: flex;
     background-color: #626567;
     
-    width: 6vw;
-    height: 6vw;
+    width: 54px;
+    height: 54px;
     border:2px solid white;
     justify-content: center;
     align-items: center;
-    align-items: center;
+    
     cursor: pointer;
 
     
 }
 .redselect{
-    background-color: red;
+    background-color: #E74C3C;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0VgFR42AfukgRabgMBcMIVUcmjmkDbRDs1y2YYlI87nUAgFnV&usqp=CAU');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cell.greenselect{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    background-color: #58D68D;
+}
+.cell:not(.warning):not(.greenselect):hover{
+    border: 0;
+    height: 50px;
+    width: 50px;
+    background-color:#CCFFFF;
+    
 }
 
-.greenselect{
-    background-color: green;
+.warning{
+    /* content: '🚩';
+    font-size: 2em; */
+    background-image:  url('https://image.shutterstock.com/image-vector/red-flag-vector-illustration-600w-437022037.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 52px;
+    
+
 }
+
 .disabled{
     pointer-events: none;
 }
 
-
-
-#restartButton{
-    display: block;
-    margin-left: 45%;
-    margin-top: 20px;
-    width: 10vw;
-    height: 5vw;
-    cursor: pointer;
+.button{
+    display: flex;
+    justify-content: center;
 }
 
+#resetButton{
+    
+    margin-top: 15px;
+    font-size: 2rem;
+    font-family: 'Concert One', cursive;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    background-color: #909497;
+    border: 2px solid gray;
+}
+.winning-message {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.9);
+    
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+.winning-message.show {
+    display: flex;
+}
+.winning-message #restartButton {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25rem 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25%;
+    
+}
 
 .child{
     display: none;
@@ -101,7 +192,7 @@ body{
     
 }
 
-.cell.greenselect.firstedge,.secondedgeleft,.thirdedgeup,.fourthedgeupleft{
+.firstedge,.secondedgeleft,.thirdedgeup,.fourthedgeupleft{
     border-top:2px solid red ;
     border-left:2px solid red ;
 }
