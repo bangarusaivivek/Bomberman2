@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Orbitron:wght@500&family=Permanent+Marker&family=Piedra&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bomberman2.css">
     <script src="bomberman2.js" defer></script>
     <title>Document</title>
@@ -12,7 +13,7 @@
         <h1 class="titlename">BOMBERMAN</h1>
     </div>
     <div class="main">
-        <h3 class="player">Bomberman</h3>
+        <h3 class="player">Username</h3>
         <div>
             <p class="score" >score</p>
         </div>
@@ -103,16 +104,20 @@
     <div class="bombdisplay" id="bomb">
     
     </div>
-    <div class="display">displayed</div>
+    <div class="display"></div>
     <div class="emojidisplay1" id="emoji1"></div>
     <div class="emojidisplay2" id="emoji2"></div>
     <div class="emojidisplay3" id="emoji3"></div>
     <div class="emojidisplay4" id="emoji4"></div>
     <div class="emojidisplay5" id="emoji5"></div>
-    <button id="restartButton">Restart</button>
+    <div class="button">
+        <button id="resetButton">Reset</button>
+    </div>
+    
     <div class="winning-message" id="winningMessage">
-        <div class="scoreElement">score</div>
-        <div class = "messageDisplay">message</div>
+        <div class="scoreElement"></div>
+        <div class = "messageDisplay"></div>
+        <button id="restartButton">Restart</button>
     </div>
 </body>
 </html>
